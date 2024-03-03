@@ -11,7 +11,7 @@ The Modelfile is a blueprint for creating and sharing models with Ollama. It spe
 1. **Clone the Repository**: First, clone this repository to your local machine using Git.
 
     ```bash
-    git clone https://github.com/b1ip/ollama_modelfile_template-.git
+    git clone https://github.com/b1ip/ollama_modelfile_template.git
     ```
 
 2. **Customize the Modelfile**: Navigate to the cloned repository and open the `Modelfile` in your favorite text editor. Uncomment and modify the necessary lines according to your specific requirements.
