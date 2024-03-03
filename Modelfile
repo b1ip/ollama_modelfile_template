@@ -6,22 +6,38 @@
 # FROM ./ollama-model.bin # Specify a local binary file as the base model. Use an absolute path or relative to the Modelfile location.
 
 # Model parameters
-# PARAMETER mirostat <0/1/2> # Enable Mirostat sampling for perplexity control. 0=disabled, 1=Mirostat, 2=Mirostat 2.0.
-# PARAMETER mirostat_eta <float> # Learning rate for Mirostat. Default: 0.1. Adjusts algorithm responsiveness.
-# PARAMETER mirostat_tau <float> # Balance between coherence and diversity. Default: 5.0. Lower values = more focused text.
-# PARAMETER num_ctx <int> # Context window size. Default: 2048. Controls tokens used for generating the next token.
-# PARAMETER num_gqa <int> # Number of GQA groups in the transformer layer. Required for some models, e.g., 8 for llama2:70b.
-# PARAMETER num_gpu <int> # Number of layers to send to the GPU(s). macOS default: 1 for metal support.
-# PARAMETER num_thread <int> # Number of threads for computation. Recommended: number of physical CPU cores.
-# PARAMETER repeat_last_n <int> # Lookback distance to prevent repetition. Default: 64, 0=disabled, -1=num_ctx.
-# PARAMETER repeat_penalty <float> # Penalty for repetitions. Higher values penalize more. Default: 1.1.
-# PARAMETER temperature <float> # Model creativity vs coherence. Higher values = more creative. Default: 0.8.
-# PARAMETER seed <int> # Random seed for generation consistency. Default: 0.
-# PARAMETER stop "<string>" # Stop sequences for generation end. Multiple stops possible with separate parameters.
-# PARAMETER tfs_z <float> # Tail free sampling for reducing less probable tokens' impact. Default: 1, >1 reduces impact more.
-# PARAMETER num_predict <int> # Max tokens to predict. Default: 128, -1=infinite generation, -2=fill context.
-# PARAMETER top_k <int> # Limits nonsense generation. Higher values = more diverse answers. Default: 40.
-# PARAMETER top_p <float> # Works with top-k for output diversity. Higher values = more diversity. Default: 0.9.
+# PARAMETER mirostat <0/1/2>
+# Enable Mirostat sampling for perplexity control. 0=disabled, 1=Mirostat, 2=Mirostat 2.0.
+# PARAMETER mirostat_eta <float>
+# Learning rate for Mirostat. Default: 0.1. Adjusts algorithm responsiveness.
+# PARAMETER mirostat_tau <float>
+# Balance between coherence and diversity. Default: 5.0. Lower values = more focused text.
+# PARAMETER num_ctx <int>
+# Context window size. Default: 2048. Controls tokens used for generating the next token.
+# PARAMETER num_gqa <int
+> # Number of GQA groups in the transformer layer. Required for some models, e.g., 8 for llama2:70b.
+# PARAMETER num_gpu <int>
+# Number of layers to send to the GPU(s). macOS default: 1 for metal support.
+# PARAMETER num_thread <int>
+# Number of threads for computation. Recommended: number of physical CPU cores.
+# PARAMETER repeat_last_n <int>
+# Lookback distance to prevent repetition. Default: 64, 0=disabled, -1=num_ctx.
+# PARAMETER repeat_penalty <float>
+# Penalty for repetitions. Higher values penalize more. Default: 1.1.
+# PARAMETER temperature <float>
+# Model creativity vs coherence. Higher values = more creative. Default: 0.8.
+# PARAMETER seed <int>
+# Random seed for generation consistency. Default: 0.
+# PARAMETER stop "<string>"
+# Stop sequences for generation end. Multiple stops possible with separate parameters.
+# PARAMETER tfs_z <float>
+# Tail free sampling for reducing less probable tokens' impact. Default: 1, >1 reduces impact more.
+# PARAMETER num_predict <int>
+# Max tokens to predict. Default: 128, -1=infinite generation, -2=fill context.
+# PARAMETER top_k <int> 
+# Limits nonsense generation. Higher values = more diverse answers. Default: 40.
+# PARAMETER top_p <float>
+# Works with top-k for output diversity. Higher values = more diversity. Default: 0.9.
 
 # Prompt template
 # TEMPLATE """{{ if .System }}system
